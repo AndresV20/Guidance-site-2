@@ -7,27 +7,36 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <span className='heading'>Datagrove Guidance Site </span>
+      <h2 className='content'> Welcome to the DataGrove resource guidance website</h2>
+      <div className='contents'>
+      <h3 className="content">Contents:</h3>
+        <ul>
+          <li>C#</li>
+          <li>Go</li>
+          <li>Typescript</li>
+          <li>Dart</li>
+          <li>HTML & CSS</li>
+        </ul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className='contents'>
+      <ul>
+          <li>React</li>
+          <li>Flutter</li>
+          <li>Tailwind CSS</li>
+
+        </ul>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='contents'>
+      <ul>
+          <li>Debugging</li>
+          <li>VitePress</li>
+          <li>Code Accessability</li>
+   
+        </ul>
+      </div>
     </div>
+
   )
 }
 
