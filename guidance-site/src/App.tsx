@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Language from "./pages/Languages";
+import LangCsharp from "./pages/Csharp";
 import NavBar from "./components/navBar";
 
 
@@ -14,7 +14,7 @@ const Application: React.FC<AppProps> = props => {
                 <NavBar  />
                 <Routes>
                     <Route path="/" element={<Home />}/>
-                    <Route path = "/languages" element={<Language />}/>
+                    <Route path = "/CSharp" element={<LangCsharp />}/>
             
                 </Routes>
             </BrowserRouter>

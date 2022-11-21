@@ -9,7 +9,7 @@ const NavBar = () => {
                 <Link to="/">Home</Link>
             </li>
             <li>
-                <Link to="/languages">Languages</Link>
+                <Link to="/Csharp">C#</Link>
             </li>
         </div>
     );
