@@ -10,7 +10,9 @@ import NavBar from "./components/navBar";
 import FrameReact from "./pages/React";
 import FrameFlutter from "./pages/Flutter";
 import FrameCssTailwind from "./pages/TailwindCss";
-
+import OtherDebug from "./pages/Debugging";
+import OtherVP from "./pages/Vitepress";
+import OtherCodeAccess from "./pages/Codeaccess";
 
 export interface AppProps{};
 const Application: React.FC<AppProps> = props => {
@@ -28,6 +30,9 @@ const Application: React.FC<AppProps> = props => {
                     <Route path = "/React" element={<FrameReact />}/>
                     <Route path = "/Flutter" element={<FrameFlutter />}/>\
                     <Route path = "/TailwindCss" element={<FrameCssTailwind />}/>
+                    <Route path = "/Debugging" element={<OtherDebug />}/>
+                    <Route path = "/Vitepress" element={<OtherVP />}/>
+                    <Route path = "/Codeaccess" element={<OtherCodeAccess />}/>
                 </Routes>
             </BrowserRouter>
        </div>

@@ -32,6 +32,15 @@ const NavBar = () => {
             <li>
                 <Link to="/TailwindCss">Tailwind CSS</Link>
             </li>
+            <li>
+                <Link to="/Debugging">Vs Code Debugger</Link>
+            </li>
+            <li>
+                <Link to="/Vitepress">VitePress</Link>
+            </li>
+            <li>
+                <Link to="/Codeaccess">Code Accessibility</Link>
+            </li>
         </div>
     );
 }
