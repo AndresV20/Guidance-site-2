@@ -5,7 +5,7 @@ export interface LangDartProps{};
 const LangDart : React.FC<LangDartProps> = props => {
     return (
         <div className="HomePage">
-        <h1 className="LangHead">This is going to be the HTML & CSS page page</h1>
+        <h1 className="LangHead">This is going to be the Dart page</h1>
         </div>
  
     )

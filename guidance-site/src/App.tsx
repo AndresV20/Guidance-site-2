@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import LangCsharp from "./pages/Csharp";
 import LangGo from "./pages/Go";
-import LangHtmlCss from "./pages/Html-Css";
+import LangHtmlCss from "./pages/HtmlCss";
 import LangTS from "./pages/Typescript";
 import LangDart from "./pages/Dart";
 import NavBar from "./components/navBar";
@@ -23,7 +23,7 @@ const Application: React.FC<AppProps> = props => {
                     <Route path = "/CSharp" element={<LangCsharp />}/>
                     <Route path = "/Go" element={<LangGo />}/>
                     <Route path = "/Typescript" element={<LangTS />}/>
-                    <Route path = "/CSharp" element={<LangHtmlCss />}/>
+                    <Route path = "/HtmlCss" element={<LangHtmlCss />}/>
                     <Route path = "/Dart" element={<LangDart />}/>
                     <Route path = "/React" element={<FrameReact />}/>
                     <Route path = "/Flutter" element={<FrameFlutter />}/>\

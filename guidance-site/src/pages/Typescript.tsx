@@ -4,8 +4,8 @@ import { BrowserRouter, Routes } from "react-router-dom";
 export interface LangTSProps{};
 const LangTS: React.FC<LangTSProps> = props => {
     return (
-        <div className="HomePage">
-        <h1 className="LangHead">This is going to be the Typescript page</h1>
+        <div className="TSPage">
+        <h1 className="LangTS">This is going to be the Typescript page</h1>
         </div>
  
     )
