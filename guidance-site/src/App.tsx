@@ -13,12 +13,14 @@ import FrameCssTailwind from "./pages/TailwindCss";
 import OtherDebug from "./pages/Debugging";
 import OtherVP from "./pages/Vitepress";
 import OtherCodeAccess from "./pages/Codeaccess";
+import SearchBar from "./components/Searchbar";
 
 export interface AppProps{};
 const Application: React.FC<AppProps> = props => {
     return (
         <div>
             <BrowserRouter>
+                <SearchBar />
                 <NavBar  />
                 <Routes>
                     <Route path="/" element={<Home />}/>

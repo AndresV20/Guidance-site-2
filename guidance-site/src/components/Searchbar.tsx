@@ -4,60 +4,66 @@ const SearchBar = () => {
     const [searchInput, setSearchInput] = useState("");
 
 
-let pages = [
-    { name: "CSharp", type: "Languages" },
-    { name: "Go", type: "Languages" },
-    { name: "Typescript", type: "Languages" },
-    { name: "Dart", type: "Languages" },
-    { name: "HtmlCss", type: "Languages" },
-    { name: "Dart", type: "Languages" },
-    { name: "React", type: "Frameworks" },
-    { name: "Flutter", type: "Frameworks" },
-    { name: "TailwindCss", type: "Frameworks" },
-    { name: "Debugging", type: "others" },
-    { name: "Vitepress", type: "others" },
-    { name: "Codeaccessibility", type: "others" },
-]
+    let pages = [
+        { name: "CSharp", type: "Languages" },
+        { name: "Go", type: "Languages" },
+        { name: "Typescript", type: "Languages" },
+        { name: "Dart", type: "Languages" },
+        { name: "HtmlCss", type: "Languages" },
+        { name: "Dart", type: "Languages" },
+        { name: "React", type: "Frameworks" },
+        { name: "Flutter", type: "Frameworks" },
+        { name: "TailwindCss", type: "Frameworks" },
+        { name: "Debugging", type: "others" },
+        { name: "Vitepress", type: "others" },
+        { name: "Codeaccessibility", type: "others" },
+    ]
 
-const handleChange = (e:any) => {
-    e.preventDefault();
-    setSearchInput(e.target.value);
-  };
+    const handleChange = (event:any) => {
+        event.preventDefault();
+        setSearchInput(event.target.value);
+    };
   
-  if (searchInput.length > 0) {
-      pages.filter((page) => {
-      return page.name.match(searchInput);
-  });
-  }
-  return <div>
+    if (searchInput.length > 0) {
+        pages.filter((page) => {
+            return page.name.match(searchInput);
+        });
+    }
+    
+    return (
+        <div>
 
-<input
-   type="search"
-   placeholder="Search here"
-   onChange={handleChange}
-   value={searchInput} />
+            <input
+            type="search"
+            placeholder="Search here"
+            onChange={handleChange}
+            value={searchInput} />
 
-<table>
-  <tr>
-    <th>Name:</th>
-    <th>Type:</th>
-  </tr>
+            {/* {pages[0].name} */}
+             {pages.map(page => {
+                return <h1>{page.name}</h1>
+                
+            })}
+            {/* <table>
+            <tr>
+                <th>Name:</th>
+                <th>Type:</th>
+            </tr>
 
-{pages.map((name, *index*) => {
+            {  map1 = pages.map (x, x++ ){
 
-<div>
-  <tr>
-    <td>{pages.name}</td>
-    <td>{pages.type}</td>
-  </tr>
-</div>
+            <div>
+            <tr>
+                <td>{pages.name}</td>
+                <td>{pages.type}</td>
+            </tr>
+            </div>
 
-})}
-</table>
+            }
+            </table> */}
 
-</div>
-
-
+        </div>
+    )
 };
 
 export default SearchBar;
