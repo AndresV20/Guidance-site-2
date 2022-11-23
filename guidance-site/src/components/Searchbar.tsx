@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = useState("");
@@ -19,55 +19,55 @@ const SearchBar = () => {
         { name: "Codeaccessibility", type: "others" },
     ]
     //conditional render
-    function renderTrue(searchInput: String){
-        return(
-        <p>Search successful!</p>
+    function renderTrue(searchInput: String) {
+        return (
+            <p>Search successful!</p>
         )
 
     }
-    function renderFalse (){
-        return(
+    function renderFalse() {
+        return (
             <p>Search was unsuccessful</p>
         )
     }
-    function render (searchInput:String){
-        const handleChange = (event:any) => {
+    function render(searchInput: string) {
+        const handleChange = (event: any) => {
             event.preventDefault();
             setSearchInput(event.target.value);
         };
-      
+
         if (searchInput.length > 0) {
             pages.filter((page) => {
                 return page.name.match(searchInput);
             });
         }
 
-    } 
 
-    // const handleChange = (event:any) => {
-    //     event.preventDefault();
-    //     setSearchInput(event.target.value);
-    // };
-  
-    // if (searchInput.length > 0) {
-    //     pages.filter((page) => {
-    //         return page.name.match(searchInput);
-    //     });
-    // }
-    
-    return (
-        <div>
-            <input
-            type="search"
-            placeholder="Search here"
-            onChange={handleChange}
-            value={searchInput} />
-            {/* {pages[0].name} access first position of the array */}
-             {pages.map(page => {
-                return <h1>{page.name}</h1>
-                
-            })}
-            {/* <table>
+
+        // const handleChange = (event:any) => {
+        //     event.preventDefault();
+        //     setSearchInput(event.target.value);
+        // };
+
+        // if (searchInput.length > 0) {
+        //     pages.filter((page) => {
+        //         return page.name.match(searchInput);
+        //     });
+        // }
+
+        return (
+            <div>
+                <input
+                    type="search"
+                    placeholder="Search here"
+                    onChange={handleChange}
+                    value={searchInput} />
+                {/* {pages[0].name} access first position of the array */}
+                {pages.map(page => {
+                    return <h1>{page.name}</h1>
+
+                })}
+                {/* <table>
             <tr>
                 <th>Name:</th>
                 <th>Type:</th>
@@ -85,12 +85,9 @@ const SearchBar = () => {
             }
             </table> */}
 
-        </div>
-    )
+            </div>
+        )
+    }
 };
 
 export default SearchBar;
-
-
-
-
