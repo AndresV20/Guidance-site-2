@@ -18,28 +18,51 @@ const SearchBar = () => {
         { name: "Vitepress", type: "others" },
         { name: "Codeaccessibility", type: "others" },
     ]
+    //conditional render
+    function renderTrue(searchInput: String){
+        return(
+        <p>Search successful!</p>
+        )
 
-    const handleChange = (event:any) => {
-        event.preventDefault();
-        setSearchInput(event.target.value);
-    };
-  
-    if (searchInput.length > 0) {
-        pages.filter((page) => {
-            return page.name.match(searchInput);
-        });
     }
+    function renderFalse (){
+        return(
+            <p>Search was unsuccessful</p>
+        )
+    }
+    function render (searchInput:String){
+        const handleChange = (event:any) => {
+            event.preventDefault();
+            setSearchInput(event.target.value);
+        };
+      
+        if (searchInput.length > 0) {
+            pages.filter((page) => {
+                return page.name.match(searchInput);
+            });
+        }
+
+    } 
+
+    // const handleChange = (event:any) => {
+    //     event.preventDefault();
+    //     setSearchInput(event.target.value);
+    // };
+  
+    // if (searchInput.length > 0) {
+    //     pages.filter((page) => {
+    //         return page.name.match(searchInput);
+    //     });
+    // }
     
     return (
         <div>
-
             <input
             type="search"
             placeholder="Search here"
             onChange={handleChange}
             value={searchInput} />
-
-            {/* {pages[0].name} */}
+            {/* {pages[0].name} access first position of the array */}
              {pages.map(page => {
                 return <h1>{page.name}</h1>
                 
