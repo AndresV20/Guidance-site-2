@@ -74,11 +74,11 @@ const SearchBar = () => {
 
             </div>
         )
-        if (searchInput == page.name){
-            return renderTrue(searchInput);
-        }else {
-            return renderFalse(searchInput);
-        }
+        // if (searchInput == page.name){
+        //     return renderTrue(searchInput);
+        // }else {
+        //     return renderFalse(searchInput);
+        // }
     }
 };
 
