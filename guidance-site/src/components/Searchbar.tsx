@@ -19,13 +19,13 @@ const SearchBar = () => {
         { name: "Codeaccessibility", type: "others" },
     ]
     //conditional render
-    function renderTrue(searchInput: String) {
+    function renderTrue(searchInput: string) {
         return (
             <p>Search successful!</p>
         )
 
     }
-    function renderFalse() {
+    function renderFalse(searchInput: string) {
         return (
             <p>Search was unsuccessful</p>
         )
@@ -41,19 +41,6 @@ const SearchBar = () => {
                 return page.name.match(searchInput);
             });
         }
-
-
-
-        // const handleChange = (event:any) => {
-        //     event.preventDefault();
-        //     setSearchInput(event.target.value);
-        // };
-
-        // if (searchInput.length > 0) {
-        //     pages.filter((page) => {
-        //         return page.name.match(searchInput);
-        //     });
-        // }
 
         return (
             <div>
@@ -87,6 +74,11 @@ const SearchBar = () => {
 
             </div>
         )
+        if (searchInput == page.name){
+            return renderTrue(searchInput);
+        }else {
+            return renderFalse(searchInput);
+        }
     }
 };
 
