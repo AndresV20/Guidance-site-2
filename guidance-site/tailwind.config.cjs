@@ -10,4 +10,8 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography')
   ],
+  presets: [
+    require('@acmecorp/base-tailwind-config')
+  ],
+
 }
