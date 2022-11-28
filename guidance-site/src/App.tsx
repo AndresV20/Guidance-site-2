@@ -13,14 +13,15 @@ import FrameCssTailwind from "./pages/TailwindCss";
 import OtherDebug from "./pages/Debugging";
 import OtherVP from "./pages/Vitepress";
 import OtherCodeAccess from "./pages/Codeaccess";
-import SearchBar from "./components/Searchbar";
+import { MyComoboBox } from "./components/headlessui";
+import { Combobox } from "@headlessui/react";
 
 export interface AppProps{};
 const Application: React.FC<AppProps> = props => {
     return (
         <div>
             <BrowserRouter>
-                <SearchBar />
+                <Combobox />
                 <NavBar  />
                 <Routes>
                     <Route path="/" element={<Home />}/>
